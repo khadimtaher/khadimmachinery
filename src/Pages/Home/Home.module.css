@@ -50,8 +50,8 @@
 /* Hero */
 .hero {
     position: relative;
-    min-height: 100vh;
-    background: url("/background.jpg") center/cover no-repeat fixed;
+   
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -325,18 +325,16 @@ font-size: 1.1rem;
 }
 
 .description {
-        font-size: 1.1rem;
-            /* Normal readable size */
-            line-height: 1.7;
-            /* Comfortable spacing */
-            color: #444;
-            /* Soft black for smooth reading */
-            margin-bottom: 1rem;
-            /* Proper spacing between paragraphs */
-            font-weight: 400;
+    margin-bottom: 1rem;
+    /* Proper spacing between paragraphs */
+    font-weight: 400;
             /* Normal weight */
-            letter-spacing: 0.2px;
-            /* Slight spacing for smoothness */
+    letter-spacing: 0.2px;
+    /* Slight spacing for smoothness */
+
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 
@@ -547,18 +545,16 @@ background: linear-gradient(135deg, #f35c04, #9d15f8);
 }
 
 .box p {
-   font-size: 1.1rem;
-   /* Normal readable size */
-   line-height: 1.7;
-     /* Comfortable spacing */
-    color: #333;
-   /* Soft black for smooth reading */
     margin-bottom: 1rem;
-    /* Proper spacing between paragraphs */
-    font-weight: 400;
-    /* Normal weight */
-    letter-spacing: 0.2px;
-     /* Slight spacing for smoothness */
+        /* Proper spacing between paragraphs */
+        font-weight: 400;
+        /* Normal weight */
+        letter-spacing: 0.2px;
+        /* Slight spacing for smoothness */
+    
+        color: #555;
+        font-size: 1.1rem;
+        line-height: 1.6;
 }
 
 /* services section  */
