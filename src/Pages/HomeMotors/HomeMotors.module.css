@@ -81,6 +81,7 @@
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
     opacity: 0.95;
+    letter-spacing: 0.2px;
 }
 
 .ctaBtn {
@@ -117,11 +118,11 @@
 }
 
 .dynamoIntro {
-    text-align: center;
     max-width: 750px;
     margin: 0 auto 40px;
     font-size: 1.05rem;
     color: #444;
+    line-height: 1.7;
 }
 
 .dynamoGrid {
@@ -158,6 +159,7 @@
 .dynamoCard li {
     margin: 6px 0;
     font-size: 0.95rem;
+    line-height: 1.7;
 }
 
 .whyUs {
@@ -196,10 +198,6 @@
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     text-align: center;
     transition: all 0.3s ease;
-}
-.iconsImg{
-    width: 50px;
-    height: 50px;
 }
 
 .serviceCard:hover {
@@ -453,11 +451,11 @@
 @media (max-width: 768px) {
     .motorCard {
         height: 350px;
-        border: 2px solid red;
+
     }
 
     .motorCard img {
-        border: 2px solid green;
+
         width: 100%;
         height: 150px;
         background-position: center;

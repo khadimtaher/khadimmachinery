@@ -241,20 +241,26 @@ font-size: 1.1rem;
     .imageGallery {
         padding: 16px;
     }
+.corner {
+    width: clamp(90px, 18vw, 160px);
+    height: clamp(90px, 18vw, 160px);
+}
 
+.topLeft,
+.topRight,
+.bottomLeft,
+.bottomRight {
+    top: clamp(-110px, -16vw, -100px) !important;
+    bottom: clamp(-110px, -16vw, -100px) !important;
+    left: clamp(-130px, -18vw, -110px) !important;
+    right: clamp(-130px, -18vw, -110px) !important;
+}
+}
+@media (max-width: 560px) {
     .corner {
-        width: 160px;
-        height: 160px;
-    }
-
-    .topLeft,
-    .topRight,
-    .bottomLeft,
-    .bottomRight {
-        top: -100px;
-        bottom: -100px;
-        left: -110px;
-        right: -110px;
+        opacity: 0.4;
+        transform: scale(0.8) !important;
+        transition: all 0.6s ease;
     }
 }
 
@@ -274,6 +280,13 @@ font-size: 1.1rem;
     }
 
 
+}
+/* Safety net – agar koi device bahut chhota ho */
+@media (max-width: 360px) {
+    .hero {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
 
 
@@ -312,7 +325,7 @@ font-size: 1.1rem;
 }
 
 .description {
-        font-size: 18px;
+        font-size: 1.1rem;
             /* Normal readable size */
             line-height: 1.7;
             /* Comfortable spacing */
@@ -534,7 +547,7 @@ background: linear-gradient(135deg, #f35c04, #9d15f8);
 }
 
 .box p {
-   font-size: 18px;
+   font-size: 1.1rem;
    /* Normal readable size */
    line-height: 1.7;
      /* Comfortable spacing */
@@ -554,7 +567,7 @@ background: linear-gradient(135deg, #f35c04, #9d15f8);
     padding: 60px 20px;
     max-width: 1200px;
     margin: 0 auto;
-    text-align: center;
+   
 }
 
 .servicesSection h2 {
@@ -562,6 +575,7 @@ background: linear-gradient(135deg, #f35c04, #9d15f8);
     font-size: 2rem;
     color: #444;
     margin-bottom: 10px;
+    text-align: center;
 }
 .servicesSection h2::after{
         content: '';
@@ -575,8 +589,9 @@ background: linear-gradient(135deg, #f35c04, #9d15f8);
 
 .intro {
     color: #555;
-    font-size: 18px;
+    font-size: 1.1rem;
     margin-bottom: 40px;
+    text-align: center;
 }
 
 .servicesGrid {
@@ -623,7 +638,7 @@ background: linear-gradient(135deg, #f35c04, #9d15f8);
 
 .card p {
     color: #555;
-    font-size: 18px;
+    font-size: 1.1rem;
     line-height: 1.5;
    
 }
@@ -670,6 +685,7 @@ background: linear-gradient(135deg, #f35c04, #9d15f8);
         font-size: 1.2rem;
     }
 }
+
 
 /* Mobile */
 @media (max-width: 600px) {

@@ -5,6 +5,7 @@ import Navbar from './Navbar/Navbar';
 import Footer from './Footer/Footer';
 
 
+
 function ParentRender() {
   return (
     <>
@@ -14,6 +15,7 @@ function ParentRender() {
       <div style={{ marginTop: "70px" }}>
         <Outlet />
       </div>
+     
       <Footer />
 
     

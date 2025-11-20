@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import styles from "./Navbar.module.css";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
+
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [navbarBg, setNavbarBg] = useState(false);
@@ -52,6 +53,7 @@ function Navbar() {
     `${styles.link} ${isActive ? styles.activeLink : ""}`;
 
   return (
+    <>
     <nav className={`${styles.navbar} ${navbarBg ? styles.scrolled : ""}`}>
       <div className={styles.container}>
 
@@ -104,6 +106,9 @@ function Navbar() {
         </div>
       </div>
     </nav>
+    
+
+    </>
   );
 }
 

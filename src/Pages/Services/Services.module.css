@@ -46,17 +46,18 @@
 
 .hero h1 {
     font-size: 2.8rem;
-        margin-bottom: 1rem;
-        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
     font-family: "El Messiri", sans-serif;
 }
 
 .hero p {
-font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 1.5rem;
     opacity: 0.95;
     letter-spacing: 0.2px;
-        /* Slight spacing for smoothness */
+    /* Slight spacing for smoothness */
+    line-height: 1.7;
 }
 
 /* SECTION TITLE */
@@ -67,9 +68,8 @@ font-size: 1.2rem;
     color: var(--dark);
     margin: 4rem 0 3rem;
     position: relative;
-   color: #333;
-
-        font-family: "El Messiri", sans-serif;
+    color: #333;
+    font-family: "El Messiri", sans-serif;
 }
 
 .sectionTitle::after {
@@ -116,7 +116,7 @@ font-size: 1.2rem;
 
 .cardContent {
     padding: 2rem 1.6rem;
-    text-align: center;
+    
 }
 
 .cardContent h3 {
@@ -124,10 +124,11 @@ font-size: 1.2rem;
     margin-bottom: 1rem;
     color: #444;
     font-family: "El Messiri", sans-serif;
+    text-align: center;
 }
 .cardContent p{
     
-            font-size: 18px;
+            font-size: 1.1rem;
             /* Normal readable size */
             line-height: 1.7;
             /* Comfortable spacing */
@@ -609,7 +610,7 @@ font-size: 1.2rem;
     color: #444;
 }
 .whyCard p{
-        font-size: 18px;
+        font-size: 1.1rem;
             /* Normal readable size */
             line-height: 1.7;
             /* Comfortable spacing */
@@ -646,7 +647,7 @@ font-size: 1.2rem;
     color: #444;
 }
 .processCard p {
-        font-size: 18px;
+        font-size: 1.1rem;
             /* Normal readable size */
             line-height: 1.7;
             /* Comfortable spacing */
