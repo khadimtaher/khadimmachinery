@@ -1,0 +1,258 @@
+/* ===== NAVBAR BASE ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===== LOGO ===== */
+.logoSection img {
+  height: 54px;
+  transition: 0.3s;
+}
+
+.logoSection img:hover {
+  transform: scale(1.07);
+}
+
+/* ===== LINKS ===== */
+.links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  font-family: "El Messiri", sans-serif;
+}
+
+.link {
+  color: #222;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.link:hover {
+  color: #8a2be2;
+}
+
+.activeLink {
+  color: #6a5acd;
+}
+
+/* ===== DROPDOWN ===== */
+.dropdown {
+  position: relative;
+}
+
+.dropdownToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: "El Messiri", sans-serif;
+}
+
+.dropdownToggle:hover {
+  color: #8a2be2;
+}
+
+.arrow {
+  font-size: 22px;
+  transition: 0.3s;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+/* Desktop dropdown */
+.dropdownMenu {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  min-width: 260px;
+  padding: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.25s ease;
+  list-style: none;
+}
+
+.dropdown:hover .dropdownMenu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdownLink {
+  padding: 10px 20px;
+  display: block;
+  color: #333;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.dropdownLink:hover {
+  background: #f9f9f9;
+  color: #8a2be2;
+  padding-left: 26px;
+}
+
+/* ===== HAMBURGER ===== */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 1100;
+}
+
+.bar {
+  width: 28px;
+  height: 3px;
+  background: #222;
+  border-radius: 3px;
+  transition: 0.4s ease;
+}
+
+/* Hamburger → X */
+.activeHamburger .bar:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.activeHamburger .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.activeHamburger .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+
+/* ==========Google translation ====== */
+
+/* Google Translate Fix */
+.goog-te-gadget {
+  font-size: 0 !important;
+}
+
+.goog-te-combo {
+  font-size: 14px !important;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.goog-logo-link,
+.goog-te-gadget span {
+  display: none !important;
+}
+
+/* Dropdown Fix */
+.goog-te-menu-value span {
+  color: #ffffff !important;
+}
+
+.goog-te-gadget .goog-te-combo {
+  color: #000 !important;
+}
+
+
+/* ===== MOBILE ===== */
+@media (max-width: 868px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .links {
+    position: fixed;
+    left: 0;
+    top: 70px;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: #111;
+    flex-direction: column;
+    padding-top: 2rem;
+    gap: 1.3rem;
+    transform: translateX(100%);
+    transition: 0.35s ease;
+  }
+
+  .links.active {
+    transform: translateX(0);
+  }
+
+  .link,
+  .dropdownToggle {
+    color: white;
+  }
+
+  /* Mobile dropdown */
+  .dropdownMenu {
+    position: static;
+    transform: none;
+    background: #222;
+    width: 100%;
+    display: none;
+  }
+
+  .showMobile {
+    display: block !important;
+  }
+
+  .dropdownLink {
+    color: #ddd;
+    padding: 12px 40px;
+  }
+
+  .dropdownLink:hover {
+    background: #333;
+    padding-left: 48px;
+    color: #8a2be2;
+  }
+
+  /* Overlay */
+  .mobileOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: none;
+  }
+
+  .links.active .mobileOverlay {
+    display: block;
+  }
+}

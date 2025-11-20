@@ -1,0 +1,56 @@
+.float_container {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 9999;
+}
+
+.float_icon {
+    width: 50px;
+    height: 50px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease;
+}
+
+.float_icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Individual icon colors */
+.whatsapp {
+    color: #25d366;
+}
+
+.phone {
+    color: #007bff;
+}
+
+.instagram {
+    color: #e1306c;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .float_container {
+        right: 10px;
+    }
+
+    .float_icon {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+}

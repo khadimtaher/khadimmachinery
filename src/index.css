@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Math&family=Libertinus+Mono&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+AU+NSW:wght@100..400&display=swap');
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+body{
+    background-color: #F5F5DC;
+}
+
+/* Global — applies to all selectable text */
+::selection {
+    background: #6a5acd;
+    /* selection background (soft purple) */
+    color: #ffffff;
+    /* text color on selection */
+}
+
+::-moz-selection {
+    /* Firefox */
+    background: #6a5acd;
+    color: #ffffff;
+}

@@ -1,0 +1,69 @@
+.backTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;               /* ← aap yahan spacing adjust kar sakte hain */
+  background: linear-gradient(135deg, #6a5acd, #f18933);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+
+  /* 🔽 default: hidden + upar ki side */
+  opacity: 0;
+  transform: translateY(-100vh);
+  pointer-events: none;
+
+  /* 🔥 smooth motion */
+  transition:
+    opacity 1s ease,
+    transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.backTop.show {
+  /* 🔽 visible + apni jagah */
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.icon {
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+.backTop:hover .icon {
+  transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .backTop {
+    bottom: 40px;
+    right: 25px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .backTop {
+    bottom: 60px;
+    right: 20px;   /* ❗️yahan aapke code me 'right: px;' typo tha */
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+}
+
+/* Motion preference respect (optional) */
+@media (prefers-reduced-motion: reduce) {
+  .backTop {
+    transition: opacity 0.2s linear;
+    transform: none;
+  }
+}

@@ -1,0 +1,339 @@
+/* ===== RESET & BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.section {
+    padding: 4rem 0;
+}
+
+.sectionTitle {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    color: #444;
+    position: relative;
+    font-family: "El Messiri", sans-serif;
+}
+
+.sectionTitle::after {
+    content: '';
+        width: 100px;
+        height: 4px;
+        background: linear-gradient(135deg, #f35c04, #9d15f8);
+        display: block;
+        margin: 1rem auto 0;
+        border-radius: 2px;
+}
+
+.bgLight {
+    background: #f8f9fa;
+}
+
+/* ===== HERO BANNER ===== */
+.hero {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+.heroImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.heroOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+    z-index: 1;
+}
+
+.heroContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+    width: 90%;
+    max-width: 800px;
+}
+
+.heroTitle {
+    text-align: center;
+        font-size: 2.2rem;
+        margin-bottom: 3rem;
+        
+        position: relative;
+        font-family: "El Messiri", sans-serif;
+}
+
+.heroSubtitle {
+    font-size: 1.3rem;
+    font-weight: 400;
+    opacity: 0.95;
+}
+
+
+/* ===== 3D HOVER EFFECT (React + Mouse Tilt) ===== */
+.hover3d {
+    transform: perspective(1000px) rotateX(var(--rotateX, 0deg)) rotateY(var(--rotateY, 0deg)) translateZ(0);
+    transform-style: preserve-3d;
+    transition:
+        box-shadow 0.4s ease,
+        transform 0.1s ease;
+    position: relative;
+    cursor: pointer;
+    border-radius: inherit;
+    overflow: hidden;
+}
+
+.hover3d::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(53, 255, 238, 0.25),
+            rgba(247, 147, 30, 0.08));
+    border-radius: inherit;
+    opacity: var(--glow-opacity, 0);
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.hover3d:hover {
+    transform:
+        perspective(1000px) rotateX(var(--rotateX, 0deg)) rotateY(var(--rotateY, 0deg)) translateY(-10px) scale(1.02);
+    box-shadow:
+        0 25px 50px rgba(0, 0, 0, 0.2),
+        0 15px 35px rgba(157, 53, 255, 0.25),
+        0 5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+
+
+
+/* ===== OVERVIEW GRID ===== */
+.overviewGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.overviewText h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #444;
+    font-family: "El Messiri", sans-serif;
+}
+
+.overviewText p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.overviewImg{
+    max-width: 500px;
+    max-height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    
+}
+.overviewImg img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== SERVICES GRID ===== */
+.servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.serviceCard {
+    background: white;
+    padding: 1.8rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+
+.serviceCard h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: #444;
+}
+
+.serviceCard p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
+
+.highlightText {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+    background: #fff8e1;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 5px solid blueviolet;
+}
+
+/* ===== WHY CHOOSE US ===== */
+.benefitsList {
+    max-width: 800px;
+    margin: 0 auto;
+    list-style: none;
+}
+
+.benefitsList li {
+    font-size: 1.15rem;
+    padding: 1rem 0;
+    border-bottom: 1px dashed #ddd;
+    color: #333;
+}
+
+.benefitsList li:last-child {
+    border-bottom: none;
+}
+
+/* ===== COMMITMENT ===== */
+.commitmentGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.commitmentGrid h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #444;
+    font-family: "El Messiri", sans-serif;
+}
+.commitmentGrid .paragraph{
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    color: #333;
+}
+
+.quote {
+    font-style: italic;
+    font-size: 1.3rem;
+    color: blueviolet;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: #fff8e1;
+    border-radius: 8px;
+    border-left: 5px solid blueviolet;
+}
+
+.commitmentImg {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* ===== CTA ===== */
+.ctaSection {
+    background: linear-gradient(135deg,
+                rgba(243, 92, 4, 0.22),
+                rgba(157, 21, 248, 0.18));
+    color: #444;
+    text-align: center;
+}
+
+.ctaSection h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.ctaSection p {
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+.ctaButton {
+    display: inline-block;
+    background: white;
+    color: #444;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.ctaButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    background: #fffbe6;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (min-width: 768px) {
+
+    .overviewGrid,
+    .commitmentGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .heroTitle {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 3rem 0;
+    }
+
+    .hero {
+        height: 60vh;
+    }
+
+    .heroTitle {
+        font-size: 2.2rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.8rem;
+    }
+}
