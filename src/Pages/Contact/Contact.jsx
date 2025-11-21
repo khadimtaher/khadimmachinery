@@ -204,16 +204,7 @@ const Contact = () => {
         {/* GOOGLE MAP */}
  <section className={styles.mapSection}>
   <div className={styles.mapWrapper}>
-    <iframe
-      title="RepairHub Location"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5362.437427050427!2d76.75065110217268!3d18.126292392129898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcf6dd69b7a908f%3A0xd8afbcd2b80550bf!2sKhadim%20Engineering%20Works!5e0!3m2!1sen!2sin!4v1763554946122!5m2!1sen!2sin"
-      width="100%"
-      height="450"
-      style={{ border:  0}}
-      allowFullScreen={true}
-      loading="lazy"
-      referrerPolicy="no-referrer-when-downgrade"
-    ></iframe>
+   <iframe className={styles.map} src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d121337.6116183482!2d76.67442545567587!3d18.12700807947977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3bcf6dd69b7a908f%3A0xd8afbcd2b80550bf!2sBidar%20Road%2C%20opposite%20Terna%20Colony%2C%20Gandhi%20Nagar%2C%20Nilanga%2C%20Nilanga%20Rural%2C%20Maharashtra%20413521!3m2!1d18.1270256!2d76.7568272!5e0!3m2!1sen!2sin!4v1763667210784!5m2!1sen!2sin"  loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
     {/* 3 links call, whatsapp, location  */}
    

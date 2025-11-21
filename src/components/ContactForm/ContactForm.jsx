@@ -178,7 +178,7 @@ const ContactSection = () => {
     </a>
 
     <a
-      href="https://instagram.com/"
+      href="https://www.instagram.com/khadim_engineering_works/"
       target="_blank"
       rel="noopener noreferrer"
       className={style.socialBtn}
@@ -190,14 +190,16 @@ const ContactSection = () => {
       <FaPhone className={style.icon}/>
     </a>
 
-    <a
-      href="https://www.google.com/maps/search/?api=1&query=Terna+Colony+Opposit+Bidar+Road+Nilanga+Latur"
-      target="_blank"
-      rel="noopener noreferrer"
-      className={style.socialBtn1}
-    >
-      <GoLocation className={style.icon}/> Get Location
-    </a>
+   <a
+  href="https://maps.app.goo.gl/cSuQu9DYbVUXDXeq8"
+  target="_blank"
+  rel="noopener noreferrer"
+  className={style.socialBtn1}
+  
+>
+  <GoLocation className={style.icon}/> Get Location
+</a>
+
   </div>
 </div>
  </div>

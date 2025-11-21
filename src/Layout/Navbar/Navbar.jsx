@@ -3,50 +3,20 @@ import { Link, NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import styles from "./Navbar.module.css";
 import { MdKeyboardArrowDown } from "react-icons/md";
-
+import GoogleTranslate from "../../components/GoogleTranslate/GoogleTranslate";
+import CustomLanguageDropdown from "../../components/CustomLanguageDropdown/CustomLanguageDropdown";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [navbarBg, setNavbarBg] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
-  const { i18n } = useTranslation();
-
-  // Scroll background effect
-  useEffect(() => {
-    const handleScroll = () => setNavbarBg(window.scrollY > 50);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+ 
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => {
     setIsOpen(false);
     setShowDropdown(false);
   };
-
-  // Google translate init
- useEffect(() => {
-  const addScript = () => {
-    if (!window.google || !window.google.translate) return;
-    new window.google.translate.TranslateElement(
-      {
-        pageLanguage: "en",
-        includedLanguages: "en,hi,mr,te,ur",
-        layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
-      },
-      "google_translate_element"
-    );
-  };
-
-  const interval = setInterval(() => {
-    if (window.google && window.google.translate) {
-      addScript();
-      clearInterval(interval);
-    }
-  }, 500);
-
-  return () => clearInterval(interval);
-}, []);
 
 
   const navLinkStyle = ({ isActive }) =>
@@ -94,7 +64,8 @@ function Navbar() {
           <li><NavLink to="/contact" className={navLinkStyle} onClick={closeMenu}>Contact</NavLink></li>
         
           <li className={styles.languageSelector}>
-            <div id="google_translate_element"></div>
+            {/* <GoogleTranslate/> */}
+            <CustomLanguageDropdown/>
           </li>
         </ul>
 

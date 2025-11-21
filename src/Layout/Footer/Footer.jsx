@@ -71,7 +71,7 @@ function Footer() {
             <a href="https://wa.me/919561666568" target="_blank" rel="noopener noreferrer">
               <FaWhatsapp />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/khadim_engineering_works/" target="_blank" rel="noopener noreferrer">
               <FaInstagram />
             </a>
             <a href="tel:+91956166656" rel="noopener noreferrer">

@@ -17,7 +17,7 @@ import SocialFloat from './components/SocialFloat/SocialFloat';
 import BackToTopButton from "./components/BackToTopButton/BackToTopButton";
 import LoadingScreen from './components/LoadingScreen/LoadingScreen';
 
-import "./i18n";
+
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);

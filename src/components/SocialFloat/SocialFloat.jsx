@@ -7,7 +7,7 @@ function SocialFloat() {
     <div className={style.float_container}>
 
       <a
-        href="https://wa.me/919999999999"
+        href="https://wa.me/91956166656"
         target="_blank"
         rel="noopener noreferrer"
         className={`${style.float_icon} ${style.whatsapp}`}
@@ -23,7 +23,7 @@ function SocialFloat() {
       </a>
 
       <a
-        href="https://instagram.com/"
+        href="https://www.instagram.com/khadim_engineering_works/"
         target="_blank"
         rel="noopener noreferrer"
         className={`${style.float_icon} ${style.instagram}`}
