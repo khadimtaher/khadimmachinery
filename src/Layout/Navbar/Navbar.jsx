@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+import { FiPhone } from "react-icons/fi";
 import styles from "./Navbar.module.css";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import GoogleTranslate from "../../components/GoogleTranslate/GoogleTranslate";
 import CustomLanguageDropdown from "../../components/CustomLanguageDropdown/CustomLanguageDropdown";
 
 function Navbar() {
@@ -62,11 +61,20 @@ function Navbar() {
           </li>
 
           <li><NavLink to="/contact" className={navLinkStyle} onClick={closeMenu}>Contact</NavLink></li>
-        
+          <div className={styles.phoneGroup}>
+            <a href="tel:+91956166656" className={styles.phoneLink}>
+              <FiPhone className={styles.linkIcon} /> +91 95616 6656
+            </a>
+            <a href="tel:+918855965998" className={styles.phoneLink}>
+              <FiPhone className={styles.linkIcon}/> +91 88559 65998
+            </a>
+          </div>
+
           <li className={styles.languageSelector}>
             {/* <GoogleTranslate/> */}
             <CustomLanguageDropdown/>
           </li>
+          
         </ul>
 
         {/* Hamburger */}

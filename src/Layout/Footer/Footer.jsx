@@ -1,5 +1,5 @@
 import React from "react";
-import { FaInstagram, FaFacebookF, FaWhatsapp } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { IoCallOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import style from "../Footer/Footer.module.css";

@@ -160,32 +160,67 @@
 
 /* ==========Google translation ====== */
 
-/* Google Translate Fix */
-.goog-te-gadget {
-  font-size: 0 !important;
+
+
+/* Phone & Language */
+.phoneGroup {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
 }
 
-.goog-te-combo {
-  font-size: 14px !important;
-  padding: 6px 8px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+.phoneLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #4c1d95;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
 }
 
-.goog-logo-link,
-.goog-te-gadget span {
-  display: none !important;
+.phoneLink:hover {
+  color: #7c3aed;
+  transform: translateY(-2px);
 }
 
-/* Dropdown Fix */
-.goog-te-menu-value span {
-  color: #ffffff !important;
+
+/* Mobile Menu mein phone numbers - White & Beautiful */
+.mobilePhones a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white !important;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 14px 16px;
+  margin: 12px 0;
+  border-radius: 12px;
+  background: rgba(139, 92, 246, 0.15);
+  border: 1px solid rgba(167, 139, 255, 0.3);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
 }
 
-.goog-te-gadget .goog-te-combo {
-  color: #000 !important;
+.mobilePhones a:hover {
+  background: rgba(139, 92, 246, 0.3);
+  color: #c4b5fd !important;
+  transform: translateX(10px);
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.2);
 }
 
+.mobilePhones svg {
+  font-size: 22px;
+  color: #c4b5fd;
+}
+
+/* Optional: Mobile menu ke neeche highlight section */
+.mobilePhones {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
 
 /* ===== MOBILE ===== */
 @media (max-width: 868px) {
@@ -244,11 +279,24 @@
   .mobileOverlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.45);
+    /* background: rgba(0, 0, 0, 0.45); */
     display: none;
   }
 
   .links.active .mobileOverlay {
     display: block;
   }
+  .phoneGroup{
+    display: table-column-group;
+
+  }
+  .phoneLink{
+    color: white;
+    padding: 10px;
+  }
+  .linkIcon{
+    color: white;
+  }
+    
+  
 }
