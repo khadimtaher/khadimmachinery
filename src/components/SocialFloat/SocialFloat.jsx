@@ -7,7 +7,7 @@ function SocialFloat() {
     <div className={style.float_container}>
 
       <a
-        href="https://wa.me/91956166656"
+        href="https://wa.me/+919561666568"
         target="_blank"
         rel="noopener noreferrer"
         className={`${style.float_icon} ${style.whatsapp}`}
@@ -16,7 +16,7 @@ function SocialFloat() {
       </a>
 
       <a
-        href="tel:+91956166656"
+        href="tel:+919561666568"
         className={`${style.float_icon} ${style.phone}`}
       >
         <FaPhoneAlt />

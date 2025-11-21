@@ -62,8 +62,8 @@ function Navbar() {
 
           <li><NavLink to="/contact" className={navLinkStyle} onClick={closeMenu}>Contact</NavLink></li>
           <div className={styles.phoneGroup}>
-            <a href="tel:+91956166656" className={styles.phoneLink}>
-              <FiPhone className={styles.linkIcon} /> +91 95616 6656
+            <a href="tel:+919561666568" className={styles.phoneLink}>
+              <FiPhone className={styles.linkIcon} /> +91 95616 66568
             </a>
             <a href="tel:+918855965998" className={styles.phoneLink}>
               <FiPhone className={styles.linkIcon}/> +91 88559 65998

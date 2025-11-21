@@ -249,7 +249,7 @@ function Submersible() {
           <p>Get it fixed today by experts — <strong>call or WhatsApp now!</strong></p>
           <div className={styles.ctaButtons}>
             <Link to="/contact" className={styles.ctaBtnPrimary}>Book Repair Now</Link>
-            <a href="tel:+919876543210" className={styles.ctaBtnSecondary}>Call: +91 98765 43210</a>
+            <a href="tel:+91 95616 66568" className={styles.ctaBtnSecondary}>Call: +91 95616 66568</a>
           </div>
         </div>
       </section>

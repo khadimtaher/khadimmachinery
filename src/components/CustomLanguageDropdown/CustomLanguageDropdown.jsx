@@ -5,12 +5,7 @@ const languages = [
   { code: "mr", label: "मराठी" },        // ← Marathi added
   { code: "hi", label: "हिन्दी" },
   { code: "ur", label: "اردو" },
-  { code: "te", label: "తెలుగు" },
-  { code: "ta", label: "தமிழ்" },
-  { code: "kn", label: "ಕನ್ನಡ" },
-  { code: "ml", label: "മലയാളം" },
-  { code: "gu", label: "ગુજરાતી" },
-  { code: "pa", label: "ਪੰਜਾਬੀ" },
+
 ];
 
 export default function CustomLanguageDropdown() {
@@ -24,7 +19,7 @@ export default function CustomLanguageDropdown() {
       new window.google.translate.TranslateElement(
         {
           pageLanguage: "en",
-          includedLanguages: "en,mr,hi,ur,te,ta,kn,ml,gu,pa",
+          includedLanguages: "en,mr,hi,ur",
           autoDisplay: false,
         },
         "google_translate_element"

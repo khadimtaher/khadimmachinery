@@ -74,7 +74,7 @@ function Footer() {
             <a href="https://www.instagram.com/khadim_engineering_works/" target="_blank" rel="noopener noreferrer">
               <FaInstagram />
             </a>
-            <a href="tel:+91956166656" rel="noopener noreferrer">
+            <a href="tel:+919561666568" rel="noopener noreferrer">
               <IoCallOutline />
             </a>
           </div>

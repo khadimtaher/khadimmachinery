@@ -246,7 +246,7 @@ function HomeMotors() {
           <p>Fix it today — <strong>call or WhatsApp now!</strong></p>
           <div className={styles.ctaButtons}>
             <Link to="/contact" className={styles.ctaBtnPrimary}>Book Now</Link>
-            <a href="tel:+919876543210" className={styles.ctaBtnSecondary}>Call: +91 98765 43210</a>
+            <a href="tel:+9195616 66568" className={styles.ctaBtnSecondary}>Call: +91 95616 66568</a>
           </div>
         </div>
       </section>
