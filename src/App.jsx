@@ -16,6 +16,8 @@ import NotFoundPage from './Pages/NotFoundPage/NotFoundPage';
 import SocialFloat from './components/SocialFloat/SocialFloat';
 import BackToTopButton from "./components/BackToTopButton/BackToTopButton";
 import LoadingScreen from './components/LoadingScreen/LoadingScreen';
+import PrivacyPolicy from './Pages/PrivacyPolicy/PrivacyPolicy';
+import Terms from './Pages/Terms/Terms';
 
 
 
@@ -51,14 +53,17 @@ function App() {
           <Route path="/services/home-motors" element={<HomeMotors />} />
           <Route path="/services/generator" element={<Generator />} />
           <Route path="/services/engine" element={<Engine />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+           <Route path="/terms" element={<Terms />} />
         </Route>
 
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
-
+       
       {/* Show only after loader */}
       <SocialFloat />
-      <BackToTopButton />
+      <BackToTopButton/>
+      
     </BrowserRouter>
   );
 }

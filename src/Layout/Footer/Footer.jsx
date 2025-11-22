@@ -96,6 +96,17 @@ function Footer() {
       {/* Copyright */}
       <div className={style.copyRight}>
         <p>© {currentYear} Khadim Engineering Works | All Rights Reserved</p>
+        <div className={style.terms}>
+
+        <p> 
+        <Link to="/privacy">Privacy & Policy</Link>
+
+        </p>
+        <p>
+        <Link to="/terms">Terms & Condition</Link>
+
+        </p>
+        </div>
       </div>
     </footer>
   );

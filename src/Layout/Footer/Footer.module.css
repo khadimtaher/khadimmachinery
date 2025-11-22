@@ -154,6 +154,18 @@
     color: #888888;
     border-top: 1px solid #333;
 }
+/* terms */
+
+.terms{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.terms p a{
+    padding: 10px;
+    color: #888888;
+}
 
 /* Responsive Design */
 
