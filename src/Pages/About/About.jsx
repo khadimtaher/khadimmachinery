@@ -100,7 +100,7 @@ function About() {
             <div className={styles.overviewText}>
               <h2>20+ Years of Excellence in Motor Repair</h2>
               <p>
-                Established in <strong>1998</strong>, we are a family-run workshop specializing in
+                Established in <strong>1997</strong>, we are a family-run workshop specializing in
                 <strong> submersible & monoblock motor rewinding, generator maintenance, and engine overhaul</strong>.
                 With decades of hands-on experience, we’ve earned the trust of thousands of households and businesses.
               </p>

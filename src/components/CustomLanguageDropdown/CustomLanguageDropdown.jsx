@@ -82,7 +82,7 @@ export default function CustomLanguageDropdown() {
           style={{
             padding: "10px 20px",
             background: "white",
-            color: "#8a2be2",
+            color: "#4c1d95",
             borderRadius: "16px",
             cursor: "pointer",
             fontWeight: "600",
@@ -124,6 +124,7 @@ export default function CustomLanguageDropdown() {
               border: "1px solid rgba(255, 255, 255, 0.2)",
               backdropFilter: "blur(15px)",
               boxShadow: "0 20px 40px rgba(0, 0, 0, 0.4)",
+              
               zIndex: 99999,
             }}
           >

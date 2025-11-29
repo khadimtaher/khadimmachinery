@@ -23,6 +23,7 @@ import { FiTool } from "react-icons/fi";
 import Testimonials from "../../components/Testimonials/Testimonials";
 import FAQs from "../../components/FAQs/FAQs";
 import ContactForm from "../../components/ContactForm/ContactForm";
+import Videos from "../../components/Videos/Videos";
 
 
 
@@ -232,7 +233,8 @@ function Home() {
 
       <button className={styles.viewMoreBtn} onClick={()=> navigate("/services")}>View All Services <FiTool/></button>
     </section>
-
+     
+     <Videos/>
     <Testimonials/>
     <FAQs/>
     <ContactForm/> 

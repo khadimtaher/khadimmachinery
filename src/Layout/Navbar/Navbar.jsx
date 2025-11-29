@@ -74,8 +74,10 @@ function Navbar() {
             {/* <GoogleTranslate/> */}
             <CustomLanguageDropdown/>
           </li>
-          
-        </ul>
+         <li>
+
+</li>
+</ul>
 
         {/* Hamburger */}
         <div className={`${styles.hamburger} ${isOpen ? styles.activeHamburger : ""}`} onClick={toggleMenu}>

@@ -21,6 +21,8 @@ import Terms from './Pages/Terms/Terms';
 
 
 
+
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -54,10 +56,13 @@ function App() {
           <Route path="/services/generator" element={<Generator />} />
           <Route path="/services/engine" element={<Engine />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
-           <Route path="/terms" element={<Terms />} />
+          <Route path="/terms" element={<Terms />} />
+          
         </Route>
-
+        
         <Route path="*" element={<NotFoundPage />} />
+        
+
       </Routes>
        
       {/* Show only after loader */}

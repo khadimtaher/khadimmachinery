@@ -15,7 +15,7 @@
 
 /* ===== CONTAINER ===== */
 .container {
-  max-width: 1200px;
+  max-width: 1500px;
   margin: auto;
   padding: 0 1rem;
   height: 70px;
@@ -57,7 +57,7 @@
 }
 
 .activeLink {
-  color: #6a5acd;
+  color: #4c1d95;
 }
 
 /* ===== DROPDOWN ===== */
@@ -222,11 +222,30 @@
   border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
+
+/* Mobile (480px se neeche) */
+@media (max-width: 480px) {
+  .loginLink {
+    padding: 0.6rem 1.4rem;
+    /* Chhota but readable */
+    font-size: 0.9rem;
+    border-width: 2px;
+    
+  
+  }
+
+  .loginLink:hover {
+    transform: scale(1.03);
+    /* Mobile pe zyada scale mat karo */
+  }
+}
+
 /* ===== MOBILE ===== */
 @media (max-width: 868px) {
   .hamburger {
     display: flex;
   }
+ 
 
   .links {
     position: fixed;
@@ -297,6 +316,7 @@
   .linkIcon{
     color: white;
   }
+  
     
   
 }
