@@ -57,9 +57,16 @@
 }
 
 .heroContent p {
-    font-size: 1.2rem;
-    opacity: 0.95;
-    line-height: 1.6;
+    font-size: clamp(1.15rem, 3vw, 1.4rem);
+        line-height: 1.6;
+        max-width: 720px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        background: linear-gradient(90deg, #f0f0ff, #ffffff);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
 }
 
 /* ===== CONTACT SECTION ===== */
@@ -213,22 +220,6 @@
     }
 }
 
-/* ===== MAP SECTION ===== */
-.mapSection {
-    padding: 3rem 0 5rem;
-}
-
-.mapWrapper {
-    border-radius: 18px;
-    overflow: hidden;
-    
-    height: 450px;
-    /* border: 2px solid gray; */
-}
-.mapWrapper .map{
-    width: 100%;
-    height: 100%;
-}
 
 /* ===== 3D TILT EFFECT ===== */
 .hover3d {

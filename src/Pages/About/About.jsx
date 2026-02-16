@@ -97,17 +97,25 @@ function About() {
       <section className={styles.section}>
         <div className={styles.container}>
           <div className={styles.overviewGrid}>
-            <div className={styles.overviewText}>
-              <h2>20+ Years of Excellence in Motor Repair</h2>
-              <p>
-                Established in <strong>1997</strong>, we are a family-run workshop specializing in
-                <strong> submersible & monoblock motor rewinding, generator maintenance, and engine overhaul</strong>.
-                With decades of hands-on experience, we’ve earned the trust of thousands of households and businesses.
-              </p>
-              <p>
-                Our mission is simple: <em>Fix it right, the first time.</em>
-              </p>
-            </div>
+           <div className={styles.overviewText}>
+  <h2>20+ Years of Trusted Motor & Generator Repair</h2>
+  <p>
+    Established in <strong>1997</strong>, we are a family-run workshop specializing in
+    <strong> submersible & monoblock motor rewinding, generator maintenance, and complete engine overhauls</strong>.
+    With decades of hands-on technical experience, we have built long-term trust with households,
+    farmers, and local businesses who depend on reliable power systems.
+  </p>
+
+  <p>
+    Every repair is properly diagnosed, repaired using quality components, and thoroughly tested
+    before delivery to ensure long-lasting performance and safety.
+  </p>
+
+  <p>
+    Our mission is simple: <em>Fix it right the first time.</em>
+  </p>
+</div>
+
             <TiltCard className={styles.overviewImg}>
               <img src={sideimg} alt="Professional motor rewinding tools and equipment" loading="lazy" />
             </TiltCard>

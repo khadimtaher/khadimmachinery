@@ -127,55 +127,68 @@ function Generator() {
   </div>
 
   {/* ✅ Dynamo Section Start */}
-  <div className={styles.dynamoSection}>
-    <h2 className={styles.sectionTitle}>Dynamo (Generator Power System)</h2>
-    <p className={styles.dynamoIntro}>
-      Dynamo generator ka ek important hissa hai jo mechanical energy ko electrical energy me convert karta hai.
-      Ye system mainly <strong>DC current</strong> generate karta hai aur small to medium power generators me use hota hai.
-    </p>
+<div className={styles.dynamoSection}>
+  <h2 className={styles.sectionTitle}>Generator & Dynamo Repair Services</h2>
 
-    <div className={styles.dynamoGrid}>
-      {[
-        {
-          title: "Key Functions",
-          points: [
-            "⚡ Electricity Generation",
-            "🔧 Voltage Regulation",
-            "🧭 Magnetic Field System",
-          ],
-        },
-        {
-          title: "Common Issues We Repair",
-          points: [
-            "Brushes wear-out or carbon deposit problems",
-            "Armature winding short circuits",
-            "Bearing jam or vibration issues",
-            "Overheating due to overload",
-            "Low voltage or no output",
-          ],
-        },
-        {
-          title: "Our Services Include",
-          points: [
-            "Full Dynamo inspection and testing",
-            "Winding rewinding service",
-            "Bearing & brush replacement",
-            "Load testing and calibration",
-            "Cleaning and lubrication",
-          ],
-        },
-      ].map((card, i) => (
-        <TiltCard key={i} className={styles.dynamoCard}>
-          <h3>{card.title}</h3>
-          <ul>
-            {card.points.map((p, j) => (
-              <li key={j}>{p}</li>
-            ))}
-          </ul>
-        </TiltCard>
-      ))}
-    </div>
+  <p className={styles.dynamoIntro}>
+    We provide complete generator repair, dynamo servicing, and full overhaul
+    solutions for residential, agricultural, and industrial units. Whether your
+    generator is not starting, producing low voltage, overheating, or losing
+    power under load — our team diagnoses the issue accurately and restores
+    reliable performance.
+  </p>
+
+  <div className={styles.dynamoGrid}>
+    {[
+      {
+        title: "Common Generator Problems We Handle",
+        points: [
+          "Generator not starting",
+          "Low or fluctuating voltage output",
+          "Overheating issues",
+          "Excessive vibration or abnormal noise",
+          "Dynamo and alternator faults",
+          "Bearing and brush wear",
+          "Wiring and winding damage",
+          "Power drop under load",
+        ],
+      },
+      {
+        title: "Our Generator Services Include",
+        points: [
+          "Complete inspection and fault diagnosis",
+          "Engine and dynamo servicing",
+          "Rewinding and electrical repair",
+          "Bearing and brush replacement",
+          "Load testing and calibration",
+          "Full generator overhaul",
+          "Preventive maintenance service",
+        ],
+      },
+      {
+        title: "Why Choose Us?",
+        points: [
+          "Experienced and skilled technical team",
+          "Accurate fault detection and troubleshooting",
+          "Use of quality spare parts",
+          "Fast turnaround time",
+          "Reliable and long-lasting repair solutions",
+        ],
+      },
+    ].map((card, i) => (
+      <TiltCard key={i} className={styles.dynamoCard}>
+        <h3>{card.title}</h3>
+        <ul>
+          {card.points.map((p, j) => (
+            <li key={j}>{p}</li>
+          ))}
+        </ul>
+      </TiltCard>
+    ))}
   </div>
+</div>
+
+  
   {/* ✅ Dynamo Section End */}
 </section>
 

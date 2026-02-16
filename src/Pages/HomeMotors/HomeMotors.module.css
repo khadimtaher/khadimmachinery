@@ -78,10 +78,16 @@
 }
 
 .heroContent p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-    opacity: 0.95;
-    letter-spacing: 0.2px;
+    font-size: clamp(1.15rem, 3vw, 1.4rem);
+        line-height: 1.6;
+        max-width: 720px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        background: linear-gradient(90deg, #f0f0ff, #ffffff);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
 }
 
 .ctaBtn {
@@ -519,8 +525,10 @@
 
 .faqQuestion {
     flex: 1;
-    padding-right: 1rem;
-    line-height: 1.5;
+        padding-right: 1rem;
+        color: #444;
+        line-height: 1.7;
+        font-size: 0.98rem;
 }
 
 .faqToggle {

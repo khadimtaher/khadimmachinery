@@ -36,7 +36,6 @@ function Footer() {
             <li><Link to="/">↠ Home</Link></li>
             <li><Link to="/about">↠ About</Link></li>
             <li><Link to="/services">↠ Services</Link></li>
-            <li><Link to="/gallery">↠ Gallery</Link></li>
             <li><Link to="/contact">↠ Contact</Link></li>
           </ul>
         </div>
@@ -82,16 +81,14 @@ function Footer() {
       </div>
 
       {/* Google Map */}
-      <div className={style.mapContainer}>
-        <iframe
-          title="Shop Location - Khadim Engineering Works"
-          src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d121337.6116183482!2d76.67442545567587!3d18.12700807947977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3bcf6dd69b7a908f%3A0xd8afbcd2b80550bf!2sBidar%20Road%2C%20opposite%20Terna%20Colony%2C%20Gandhi%20Nagar%2C%20Nilanga%2C%20Nilanga%20Rural%2C%20Maharashtra%20413521!3m2!1d18.1270256!2d76.7568272!5e0!3m2!1sen!2sin!4v1763641763254!5m2!1sen!2sin"
-          className={style.mapIframe}
-          loading="lazy"
-          allowFullScreen
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
+<iframe
+  title="Khadim Engineering Works Location"
+  src="https://www.google.com/maps?q=Khadim+Engineering+Works+Nilanga+Maharashtra+413521&z=15&output=embed"
+  className={style.mapIframe}
+  loading="lazy"
+  allowFullScreen
+></iframe>
+
 
       {/* Copyright */}
       <div className={style.copyRight}>

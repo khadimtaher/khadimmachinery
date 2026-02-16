@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import styles from './Contact.module.css';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
+import { FaPhone, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 import emailjs from "emailjs-com";
 
 // Toast Component
@@ -132,8 +132,8 @@ const Contact = () => {
               <div className={styles.iconWrapper}><FaClock /></div>
               <h3>Working Hours</h3>
                <p>Monday – Sunday: <strong>9:00 AM – 10:00 PM</strong></p>
-              
             </div>
+
           </div>
 
           {/* Contact Form */}
@@ -202,13 +202,6 @@ const Contact = () => {
         </section>
 
         {/* GOOGLE MAP */}
- <section className={styles.mapSection}>
-  <div className={styles.mapWrapper}>
-   <iframe className={styles.map} src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d121337.6116183482!2d76.67442545567587!3d18.12700807947977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3bcf6dd69b7a908f%3A0xd8afbcd2b80550bf!2sBidar%20Road%2C%20opposite%20Terna%20Colony%2C%20Gandhi%20Nagar%2C%20Nilanga%2C%20Nilanga%20Rural%2C%20Maharashtra%20413521!3m2!1d18.1270256!2d76.7568272!5e0!3m2!1sen!2sin!4v1763667210784!5m2!1sen!2sin"  loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
-    {/* 3 links call, whatsapp, location  */}
-   
-</section>
 
       </div>
     </div>

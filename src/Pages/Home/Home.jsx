@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from "react-router-dom";
 import styles from "./Home.module.css";
 
@@ -15,7 +15,7 @@ import AnimatedStats from "../../components/AnimatedStats/AnimatedStats";
 import pumpImg from "../../Images/submersible.png";
 import generatorImg from "../../Images/S_generator.png"
 import threadingImg from "../../Images/pipeThreading.png"
-import engineRepair from "../../Images/engineRepair.png"
+import engineRepair from "../../Images/enginerep.png"
 
 
 // react icons 
@@ -25,7 +25,16 @@ import FAQs from "../../components/FAQs/FAQs";
 import ContactForm from "../../components/ContactForm/ContactForm";
 import Videos from "../../components/Videos/Videos";
 
+// home page slider banner images 
+import pumpbanner from "../Home/imgs/pumpbanner.jpeg";
+import genbanner from "../Home/imgs/genbanner.jpeg";
+import toolsbanner from "../Home/imgs/toolsbanner.jpeg";
 
+// circle section images 
+import rewinding from '../Home/imgs/rewinding.jpg';
+import pump from "../Home/imgs/pump.png";
+import generator from "../Home/imgs/gene.png";
+import engine from "../Home/imgs/ing.png";
 
 // 3D Card Component with Mouse Tilt
 const TiltCard = ({ children, className = "" }) => {
@@ -130,40 +139,141 @@ function Home() {
  
   ];
 
+  // round circles section 
+  const circleData = [
+  {
+    title: "Generators",
+    image: generator,
+  },
+  {
+    title: "Engine",
+    image: engine,
+  },
+  {
+    title: "Pumps",
+    image: pump,
+  },
+  {
+    title: "Repair & Rewinding",
+    image: rewinding,
+  },
+];
 
+
+const sliderData = [
+{
+  image: mainImg,
+  title: "Innovating Solutions for Every Motor",
+  desc: `Expert Repair, Rewinding & Maintenance
+Motors • Pumps • Generators • Engines & More`
+},
+  {
+    image: pumpbanner,
+    title: "Reliable Pump Solutions",
+    desc: "Precision servicing for centrifugal, submersible, booster & all industrial pumps."
+  },
+  {
+    image: genbanner,
+    title: "Uninterrupted Power with Generators",
+    desc: "Diesel genset sales, installation, AMC & emergency breakdown support."
+  },
+  {
+    image: toolsbanner,
+    title: "Precision Engineering You Can Trust",
+    desc: "State-of-the-art workshop with skilled technicians and modern tools."
+  },
+  // aur chahiye toh add kar sakte ho
+];
+
+const [currentIndex, setCurrentIndex] = useState(0);
+const timerRef = useRef(null);
+
+const goToNext = () => {
+  setCurrentIndex((prev) => (prev + 1) % sliderData.length);
+};
+
+const goToPrev = () => {
+  setCurrentIndex((prev) => (prev - 1 + sliderData.length) % sliderData.length);
+};
+
+useEffect(() => {
+  timerRef.current = setInterval(goToNext, 5500); // 5.5 seconds per slide
+  return () => clearInterval(timerRef.current);
+}, []);
+
+// Pause on hover (optional but mast feel deta hai)
+const handleMouseEnter = () => clearInterval(timerRef.current);
+const handleMouseLeave = () => {
+  timerRef.current = setInterval(goToNext, 5500);
+};
   return (
     <>
-    <div className={styles.home}>
-      <div className={styles.overlay} />
-
-      {/* Hero Section */}
-      <section className={styles.hero}>
-        <div className={styles.textContent}>
-          <h1>Innovating Solutions for Every Motor, Pump & Generator</h1>
-          <p>
-            Expert solutions for all kinds of motors, pumps, and generators — crafted with precision, trust, and technology.
-          </p>
+   
+<div 
+  className={styles.sliderContainer}
+  onMouseEnter={handleMouseEnter}
+  onMouseLeave={handleMouseLeave}
+>
+  <div className={styles.sliderWrapper}>
+    {sliderData.map((slide, index) => (
+      <div
+        key={index}
+        className={`${styles.slide} ${index === currentIndex ? styles.active : ''}`}
+      >
+        <img 
+          src={slide.image} 
+          alt={slide.title} 
+          className={styles.slideImage}
+        />
+        <div className={styles.slideOverlay}>
+          <div className={styles.textContent}>
+            <h1>{slide.title}</h1>
+            <p>{slide.desc}</p>
+          </div>
         </div>
+      </div>
+    ))}
+  </div>
 
-        <div className={styles.imageGallery}>
-          <TiltCard className={styles.mainImage}>
-            <img src={mainImg} alt="Precision Engineering" />
-          </TiltCard>
+  {/* Dots */}
+  <div className={styles.dots}>
+    {sliderData.map((_, i) => (
+      <button
+        key={i}
+        className={`${styles.dot} ${i === currentIndex ? styles.activeDot : ''}`}
+        onClick={() => setCurrentIndex(i)}
+      />
+    ))}
+  </div>
 
-          {["topLeft", "topRight", "bottomLeft", "bottomRight"].map((pos, i) => (
-            <div
-              key={pos}
-              ref={(el) => (cornersRef.current[i] = el)}
-              className={`${styles.corner} ${styles[pos]}`}
-            >  
-              <img src={cornerImages[i]} alt={`Decorative ${pos}`} />           
-            </div>
-          ))}
+  {/* Arrows (optional – chhote screen pe hide kar sakte ho) */}
+  <button className={`${styles.arrow} ${styles.prevArrow}`} onClick={goToPrev}>←</button>
+  <button className={`${styles.arrow} ${styles.nextArrow}`} onClick={goToNext}>→</button>
+</div>
+
+{/* images circles round section  */}
+
+<section className={styles.servicesSection}>
+  <h2 className={styles.sectionTitle}>Our Core Expertise</h2>
+  
+  <div className={styles.circlesContainer}>
+    {circleData.map((item, index) => (
+      <div key={index} className={styles.circleWrapper}>
+        <div className={styles.outerCircle}>
+          <div className={styles.innerCircle}>
+            <img 
+              src={item.image} 
+              alt={item.title} 
+              className={styles.circleImage} 
+            />
+          </div>
         </div>
-      </section>
+        <p className={styles.circleLabel}>{item.title}</p>
+      </div>
+    ))}
+  </div>
+</section>
 
-      
-    </div>
 
     {/* Short About Section */}
       <section className={styles.shortAbout}>
@@ -174,7 +284,7 @@ function Home() {
           </p>
           <p className={styles.description}>
            Khadim Engineering Works – Trusted Mechanical Solutions Since 1997
-           Founded by Khadim Noor Pasha, Khadim Engineering Works has been providing reliable and high-quality mechanical services for over two decades. We specialize in water submersible pumps, feed-mounted motors, engines (all services and repairs), generators (repairs, used sales, and rental), pipe threading, installations, and much more. Our team of skilled technicians uses modern tools and techniques to ensure that every project is completed efficiently and to the highest standards. Customer satisfaction is at the heart of everything we do, making us a trusted choice for all mechanical needs.          </p>
+           Founded by Khadim Noor Pasha, Khadim Engineering Works has been providing reliable and high-quality mechanical services for over two decades. We specialize in water submersible pumps, feed-mounted motors, engines (all services and repairs), generators (repairs, used sales, and rental), pipe threading, installations, and much more. Our team of skilled technicians uses modern tools and techniques to ensure that every project is completed efficiently and to the highest standards. Customer satisfaction is at the heart of everything we do, making us a trusted choice for all mechanical needs.</p>
 
           <button
             className={styles.knowMoreBtn}
