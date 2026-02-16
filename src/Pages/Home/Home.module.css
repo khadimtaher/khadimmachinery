@@ -9,7 +9,6 @@
     /* Zyada lamba na bane */
     overflow: hidden;
     margin: 0 auto;
-    border-radius: 0 0 24px 24px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
@@ -330,7 +329,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to right, #f5f5f5, #e0e0e0);
+    /* background: linear-gradient(to right, #f5f5f5, #e0e0e0); */
     padding: 60px 20px;
     gap: 40px;
     border-radius: 12px;
@@ -421,28 +420,7 @@ background: linear-gradient(135deg, #f35c04, #9d15f8);
     transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
     transform: rotate(-8deg) perspective(1000px);
     z-index: 1;
-}
-
-/* Animated Gradient Border (Modern Touch) */
-.aboutImage::before {
-    content: '';
-    position: absolute;
-    top: -4px;
-    left: -4px;
-    right: -4px;
-    bottom: -4px;
-    border-radius: 28px;
-    background: conic-gradient(from 0deg,
-            #8b5cf6, #ec4899, #3b82f6, #10b981, #f59e0b, #8b5cf6);
-    background-size: 300% 300%;
-    z-index: -1;
-    animation: borderSpin 8s linear infinite;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.aboutImage:hover::before {
-    opacity: 1;
+    border: 2px solid rgb(241, 126, 97);
 }
 
 /* Image Styling */
@@ -454,7 +432,8 @@ background: linear-gradient(135deg, #f35c04, #9d15f8);
     transform: rotate(8deg) scale(1.02);
     transition: all 0.5s ease;
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-    border: 2px solid rgba(255, 255, 255, 0.3);
+   
+    
 }
 
 /* Hover Effects */
@@ -463,6 +442,7 @@ background: linear-gradient(135deg, #f35c04, #9d15f8);
     box-shadow:
         0 20px 40px rgba(0, 0, 0, 0.15),
         inset 0 2px 12px rgba(255, 255, 255, 0.3);
+    
 }
 
 .aboutImage:hover img {
@@ -667,9 +647,10 @@ background: linear-gradient(135deg, #f35c04, #9d15f8);
 }
 
 .card p {
-    color: #555;
+    color: #444;
     font-size: 1.1rem;
     line-height: 1.5;
+    text-align: start;
    
 }
 
@@ -751,10 +732,6 @@ background: linear-gradient(135deg, #f35c04, #9d15f8);
         font-size: 1.5rem;
     }
 
-    .card p {
-        font-size: 1.2rem;
-        
-    }
 
     .viewMoreBtn {
         padding: 8px 20px;
