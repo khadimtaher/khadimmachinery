@@ -86,7 +86,8 @@ const ContactSection = () => {
 
   const [errors, setErrors] = useState({});
   const [toast, setToast] = useState(null);
-  const isSubmittingRef = useRef(false);
+ const [isSubmitting, setIsSubmitting] = useState(false);
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -118,36 +119,48 @@ const ContactSection = () => {
 
   const closeToast = () => setToast(null);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!validate()) return;
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    if (isSubmittingRef.current) return;
-    isSubmittingRef.current = true;
+  if (!validate()) return;
+  if (isSubmitting) return;
 
-    emailjs
-      .send("service_v7e5tc8", "template_ulkzmdj", formData, "DNX-eiIZoqEQ2B2k8")
-      .then(() => {
-        return emailjs.send(
-          "service_v7e5tc8",
-          "template_s1c0fsu",
-          formData,
-          "DNX-eiIZoqEQ2B2k8"
-        );
-      })
-      .then(() => {
-        setFormData({ name: "", email: "", phone: "", address: "", message: "" });
-        setErrors({});
-        showToast("Thank you! Your message has been sent successfully.", "success");
-      })
-      .catch((err) => {
-        console.error("EmailJS Error:", err);
-        showToast("Failed to send message. Please try again.", "error");
-      })
-      .finally(() => {
-        isSubmittingRef.current = false;
-      });
-  };
+  setIsSubmitting(true);
+
+  try {
+    await emailjs.send(
+      "service_v7e5tc8",
+      "template_ulkzmdj",
+      formData,
+      "DNX-eiIZoqEQ2B2k8"
+    );
+
+    await emailjs.send(
+      "service_v7e5tc8",
+      "template_s1c0fsu",
+      formData,
+      "DNX-eiIZoqEQ2B2k8"
+    );
+
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      address: "",
+      message: "",
+    });
+
+    setErrors({});
+    showToast("Thank you! Your message has been sent successfully.", "success");
+
+  } catch (err) {
+    console.error("EmailJS Error:", err);
+    showToast("Failed to send message. Please try again.", "error");
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
 
   return (
     <>
@@ -302,20 +315,20 @@ const ContactSection = () => {
               </span>
             </div>
 
-            <button
-              type="submit"
-              className={style.submitBtn}
-              disabled={isSubmittingRef.current}
-              aria-label={isSubmittingRef.current ? "Sending message" : "Send message"}
-            >
-              {isSubmittingRef.current ? (
-                <>
-                  <span className={style.spinner}></span> Sending...
-                </>
-              ) : (
-                "Send Message"
-              )}
-            </button>
+          <button
+  type="submit"
+  className={style.submitBtn}
+  disabled={isSubmitting}
+>
+  {isSubmitting ? (
+    <>
+      <span className={style.spinner}></span> Sending...
+    </>
+  ) : (
+    "Send Message"
+  )}
+</button>
+
           </form>
         </div>
       </section>

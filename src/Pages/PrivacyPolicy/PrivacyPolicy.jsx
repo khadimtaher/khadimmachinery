@@ -76,8 +76,8 @@ const PrivacyPolicy = () => {
             <p>
               If you have any questions about this Privacy Policy or how your information is handled, you can contact us at:
               <br />
-              <a href="mailto:privacy@mechanicalsite.com" className={styles.link}>
-                privacy@mechanicalsite.com
+              <a href="mailto: khadimengineeringworks@gmail.com" className={styles.link}>
+                khadimengineeringworks@gmail.com
               </a>
             </p>
           </div>

@@ -710,12 +710,17 @@ background: linear-gradient(135deg, #f35c04, #9d15f8);
     }
 
     .intro {
-        font-size: 0.95rem;
+        font-size: 1rem;
     }
+    
 
     .servicesGrid {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+    .servicesGrid p{
+        font-size: 1rem;
+        
     }
 
     .card {
@@ -724,8 +729,9 @@ background: linear-gradient(135deg, #f35c04, #9d15f8);
     }
 
     .imageBox {
-       
-        height: 300px;
+        height: 250px;
+        width: 300px;
+        margin: 0 auto;
     }
 
     .card h3 {
