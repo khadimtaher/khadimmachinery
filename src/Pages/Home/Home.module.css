@@ -135,6 +135,8 @@
 /* Arrows */
 .arrow {
     position: absolute;
+    display: grid;
+    place-content: center;
     top: 50%;
     transform: translateY(-50%);
     width: 55px;
@@ -190,6 +192,9 @@
         width: 45px;
         height: 45px;
         font-size: 1.6rem;
+        display: grid;
+        place-items: center;
+          
     }
 
     .prevArrow {

@@ -4,6 +4,7 @@ import { FiPhone } from "react-icons/fi";
 import styles from "./Navbar.module.css";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import CustomLanguageDropdown from "../../components/CustomLanguageDropdown/CustomLanguageDropdown";
+import ScrollIndicator from "../../components/ScrollIndicator/ScrollIndicator";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -87,7 +88,7 @@ function Navbar() {
         </div>
       </div>
     </nav>
-    
+    <ScrollIndicator/>
 
     </>
   );

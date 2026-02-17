@@ -1,0 +1,23 @@
+.wrapper {
+    position: fixed;
+    top: 70px;
+    /* Navbar height */
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: rgba(0, 0, 0, 0.1);
+        /* light background under line */
+    /* light background */
+    z-index: 9999;
+}
+
+.bar {
+    height: 100%;
+background: linear-gradient(to right,
+            #ff512f,
+            #b804ff);
+    /* your brand color */
+    width: 0%;
+    transition: width 0.2s ease-out;
+    /* smooth animation */
+}
