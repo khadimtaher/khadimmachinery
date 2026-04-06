@@ -179,12 +179,13 @@ function Engine() {
           <h2 className={styles.sectionTitle}>Common Engine Issues We Fix</h2>
           <div className={styles.faqGrid}>
             {[
-              { q: "Engine not starting", a: "Usually caused by fuel blockage, weak battery, or faulty starter. Low compression can also prevent proper ignition."  },
-              { q: "Overheating", a: "Happens due to coolant leaks, a stuck thermostat, or a clogged radiator. Proper cooling system check resolves it." },
-              { q: "Low power", a: "Dirty air filter or blocked injector reduces engine performance. Incorrect timing also leads to low acceleration."  },
-              { q: "White smoke", a: "Indicates coolant entering the combustion chamber, often due to a blown head gasket. Immediate inspection is required."  },
-              { q: "Knocking sound", a: "Caused by worn bearings, piston slap, or incorrect fuel grade. Ignoring it can lead to major engine damage."  },
-              { q: "Oil consumption high", a: "Worn piston rings or leaking valve seals increase oil burning. Repairing these parts restores normal oil usage." }
+              { q: "What kind of engines do you repair?", a: "We repair air‑cooled diesel engines used in industrial applications like pumps, compressors, and power units."  },
+              { q: "Why do air‑cooled engines overheat?", a: "Overheating can be caused by clogged cooling fins, prolonged heavy load, or lack of air circulation. Our team checks and restores cooling efficiency." },
+              { q: "What causes excessive smoke from engines?", a: "Smoke can be due to fuel injection issues, worn rings, or oil entering the combustion chamber. Immediate inspection is recommended."  },
+              { q:  "Why does the engine make unusual noise?", a: "Abnormal sounds often point to worn bearings, loose parts, or misalignment. We diagnose and fix the root cause."  },
+              { q: "Engine starts hard or slows down?", a: "This can be due to fuel delivery issues, weak battery/starter, or blocked filters. Our service includes full system inspection."  },
+              { q: "How often should oil be changed?", a: "Oil change depends on usage hours and load. For industrial engines, we recommend professional inspection to decide the right interval." }
+            
             ].map((item, i) => (
               <details key={i} className={styles.faqItem}>
                 <summary className={styles.faqSummary}>
@@ -208,12 +209,13 @@ function Engine() {
           <h2 className={styles.sectionTitle}>Frequently Asked Questions</h2>
           <div className={styles.faqGrid}>
             {[
-              { q: "How long does engine overhaul take?", a: "3–7 days depending on damage." },
-              { q: "Do you repair all engine types?", a: "Yes — car, bike, truck, generator, marine." },
-              { q: "Cost of 4-cylinder overhaul?", a: "₹25,000–₹60,000 based on parts." },
-              { q: "Do you offer pickup?", a: "Yes! Free within 20 km." },
+              { q: "How long does engine overhaul take?", a: "2–4 days depending on damage." },
+              { q: "Do you repair all engine types?", a: "Yes — we specialize in repairing all types of engines, including Kirloskar, Crompton, Lubi, and other popular brands." },
+              { q: "How long does a 2-cylinder engine overhaul take?", a:  "The time required depends on the extent of damage and parts availability. Our team will assess and give an estimate before starting the work." },
+              { q: "Do you offer pickup?", a: "No, we do not provide pickup or delivery services. Customers are requested to bring the engine or equipment to our shop for repair."},
               { q: "How to maintain engine?", a: "Regular oil change, clean filter, avoid overload." },
-              { q: "Warranty on repair?", a: "6–12 months on major overhaul." }
+              { q: "What if my engine develops a fault after repair?", a: "Our team can inspect and repair it again. Charges will apply depending on the type of issue." }
+            
             ].map((faq, i) => (
               <details key={i} className={styles.faqItem}>
                 <summary className={styles.faqSummary}>

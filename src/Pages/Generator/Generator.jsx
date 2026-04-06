@@ -292,8 +292,8 @@ function Generator() {
               { q: "Do you repair all brands?", a: "Yes — Kirloskar, Cummins, Honda, Mahindra, etc." },
               { q: "Cost of 5 KVA rewinding?", a: "₹8000–₹15000 based on damage." },
               { q: "Do you offer AMC?", a: "Yes! Quarterly & half-yearly plans." },
-              { q: "Emergency service?", a: "24/7 on-call technician." },
-              { q: "Warranty?", a: "3–12 months on repair & parts." }
+              { q: "Can I contact you for emergency repair?", a: "Yes, you can call or message us directly for urgent repair services." },
+              { q: "What if my motor/generator develops a fault after repair?", a: "Our team can inspect and repair it again. Charges will apply depending on the issue." }
             ].map((faq, i) => (
               <details key={i} className={styles.faqItem}>
                 <summary className={styles.faqSummary}>

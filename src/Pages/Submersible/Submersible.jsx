@@ -188,12 +188,13 @@ function Submersible() {
           <h2 className={styles.sectionTitle}>Common Submersible Issues We Fix</h2>
           <div className={styles.faqGrid}>
             {[
-              { q: "Motor not starting", a: "Motor usually fails to start due to a faulty capacitor, damaged starter, or broken winding. Our technician checks each part to restore smooth operation." },
-              { q: "Low water pressure", a:  "Low pressure is caused by a clogged impeller, worn diffuser, or partial winding burn. We clean, repair, and recalibrate the motor for full output." },
-              { q: "Burning smell", a: "A burning smell means the motor is overheating because of dry-run or overload. Immediate inspection prevents coil damage and costly repairs." },
+              { q: "Motor not starting", a:  "Common reasons include faulty capacitor, starter issues, or damaged winding. Our technicians inspect the motor and suggest the right repair options." },
+              { q: "Low water pressure", a:  "Low pressure may happen due to clogged impeller, worn parts, or partial winding issues. We inspect the motor and advise on necessary maintenance or repair." },
+              { q: "Burning smell from motor", a: "A burning smell can indicate overheating caused by dry-run or overload. Our team inspects the motor and recommends safe repair steps." },
               { q: "Frequent tripping", a: "Frequent MCB tripping happens due to earth leakage or cable short circuits. We identify the exact fault and repair the wiring or motor safely."},
               { q: "Noise & vibration", a: "Unusual noise or vibration indicates a bent shaft, loose impeller, or worn bearings. Our service includes alignment and bearing replacement." },
-              { q: "Water in motor", a: "Water enters the motor when the mechanical seal or cable joint is damaged. We reseal the motor and waterproof all joints to prevent future leaks." }
+              { q: "Can water damage a submersible motor?", a:"Submersible motors are built to operate in water. Damage occurs only if the motor has cracks, broken seals, or faulty cable joints. Our team inspects and advises on safe repairs if needed." }
+           
             ].map((item, i) => (
               <details key={i} className={styles.faqItem}>
                 <summary className={styles.faqSummary}>
@@ -219,11 +220,11 @@ function Submersible() {
           <div className={styles.faqGrid}>
             {[
               { q: "How long does submersible motor repair take?", a: "Most repairs are completed in 24–48 hours. Complex rewinding may take 2–3 days." },
-              { q: "Do you provide warranty on repairs?", a: "Yes! We offer 6–12 months warranty on rewinding and 3 months on parts." },
-              { q: "Can you repair any brand of submersible pump?", a: "Yes — Kirloskar, Crompton, Texmo, CRI, V-Guard, and all local brands." },
-              { q: "What is the cost of rewinding a 1 HP submersible motor?", a: "Starts from ₹1800–₹3500 depending on HP, damage, and copper price." },
-              { q: "Do you offer pickup & delivery?", a: "Yes! Free pickup within 15 km. Delivery charges apply beyond that." },
-              { q: "How to prevent motor burn in summer?", a: "Install dry run protector, use proper starter, avoid low voltage." }
+              { q: "Can you repair any brand of submersible pump?", a: "Yes, we service all major brands including Kirloskar, Crompton, Texmo, CRI, V-Guard, and most local brands." },
+              { q: "What is the cost of rewinding submersible motor?", a: "Cost depends on HP, damage, and copper price. Exact charges are confirmed after inspection."},
+              { q: "Do you offer pickup & delivery?", a: "Technicians can arrange pickup or on-site service. Charges may apply depending on distance and service required." },
+              { q:  "How can I prevent motor burn in summer?", a: "Install dry run protector, use proper starter, avoid low voltage." },
+              { q: "What if the motor has issues after repair?", a: "If any problem occurs after repair, our team can inspect and guide you on the required corrective steps. Charges may apply depending on the issue."}
             ].map((faq, i) => (
               <details key={i} className={styles.faqItem}>
                 <summary className={styles.faqSummary}>

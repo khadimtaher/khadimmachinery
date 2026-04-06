@@ -165,7 +165,7 @@ const sliderData = [
   image: mainImg,
   title: "Innovating Solutions for Every Motor",
   desc: `Expert Repair, Rewinding & Maintenance
-Motors • Pumps • Generators • Engines & More`
+         Motors • Pumps • Generators • Engines & More`
 },
   {
     image: pumpbanner,

@@ -216,12 +216,13 @@ function Monoblock() {
           <h2 className={styles.sectionTitle}>Frequently Asked Questions</h2>
           <div className={styles.faqGrid}>
             {[
-              { q: "How long does monoblock repair take?", a: "Most repairs done in 24–48 hours." },
-              { q: "Do you repair all brands?", a: "Yes — Kirloskar, Crompton, Texmo, CRI, V-Guard, etc." },
-              { q: "What is the rewinding cost for 1 HP?", a: "₹1500–₹3000 based on damage & copper price." },
-              { q: "Do you offer pickup?", a: "Yes! Free within 15 km." },
-              { q: "How to prevent dry run?", a: "Install float switch or dry run protector." },
-              { q: "Warranty on repair?", a: "6–12 months on rewinding, 3 months on parts." }
+              { q: "How long does monoblock repair take?", a: "Most repairs are completed within 24–48 hours, depending on the issue." },
+              { q: "Which brands do you repair?", a: "We repair all major monoblock motor brands, including Kirloskar, Crompton, Texmo, CRI, V-Guard, and others."},
+              { q: "What is the rewinding cost for 1 HP?", a: "Cost depends on the extent of damage and copper price. Exact charges are confirmed after inspection." },
+              { q:  "Do you provide home pickup or visit?", a: "Technicians can visit or arrange collection for your motor. Charges apply based on distance and service required." },
+              { q: "How can I prevent dry run?", a:"Install a float switch or dry run protector to prevent motor damage due to running without water."},
+              { q: "After service, what if the motor has issues?", a: "If any issue occurs after repair, our team can inspect and fix it. Charges may apply depending on the problem." }
+            
             ].map((faq, i) => (
               <details key={i} className={styles.faqItem}>
                 <summary className={styles.faqSummary}>

@@ -215,12 +215,13 @@ function HomeMotors() {
           <h2 className={styles.sectionTitle}>Frequently Asked Questions</h2>
           <div className={styles.faqGrid}>
             {[
-              { q: "How long does home pump repair take?", a: "Usually 4–24 hours. Same-day service available." },
-              { q: "Do you repair all home pump brands?", a: "Yes — Crompton, Kirloskar, V-Guard, Usha, Havells, etc." },
+              { q: "How long does home pump repair take?", a: "Repairs are usually completed within 4–24 hours. Same-day or next-day service is available depending on the issue." },
+              { q: "Which home pump brands do you repair?", a: "We repair all major domestic pump brands, including Crompton, Kirloskar, V-Guard, Usha, Havells, and others." },
               { q: "Cost of 0.5 HP rewinding?", a: "₹1200–₹2200 depending on damage." },
-              { q: "Do you come to home?", a: "Yes! Free visit within 10 km." },
-              { q: "How to prevent pump burn?", a: "Use stabilizer, avoid dry run, clean filter." },
-              { q: "Warranty?", a: "3–6 months on repair, 1 month on parts." }
+              { q: "Do you provide home visits?", a: "Yes! Our technicians can visit your home to inspect and repair the pump. Charges apply based on distance and service required."},
+              { q: "How can I prevent my pump from burning out?", a: "Use a stabilizer to maintain voltage, avoid running the pump dry, and keep the filters clean."},
+              { q: "What if the pump develops a fault again?", a: "Our team can inspect and repair it again. Charges may apply depending on the type of issue." }
+            
             ].map((faq, i) => (
               <details key={i} className={styles.faqItem}>
                 <summary className={styles.faqSummary}>
