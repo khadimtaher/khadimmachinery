@@ -287,8 +287,8 @@
 }
 
 .zigzagIcon {
-    width: 64px;
-    height: 64px;
+    width: 100px;
+    height: 100px;
     background: #b535ff;
     color: white;
     border-radius: 50%;
@@ -340,12 +340,12 @@
 }
 
 .zigzagLeft::before {
-    right: 45%;
+    left: 45%;
     transform: translateY(-50%);
 }
 
 .zigzagRight::before {
-    left: 45%;
+    right: 45%;
     transform: translateY(-50%);
 }
 
